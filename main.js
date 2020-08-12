@@ -32,10 +32,29 @@ class BlockChain {
         newBlock.hash = newBlock.calculateHash();
         this.chain.push(newBlock);
     }
+
+    isChainValid() {
+        for(let i = 1; i < this.chain.length; i++) {
+            const currentBlock = this.chain[i];
+            const previousBlock = this.chain[i - 1];
+            
+            if(currentBlock.hash !== currentBlock.calculateHash()) {
+                return false;
+            }
+
+            if(currentBlock.previousHash !== previousBlock.hash) {
+                return false;
+            }
+
+            return true;
+        }
+    }
 }
 
 let zeni = new BlockChain();
 zeni.addBlock(new Block(0, '13/08/2020', { amount : 10 }));
 zeni.addBlock(new Block(0, '14/08/2020', { amount : 20 }));
 
-console.log(JSON.stringify(zeni, null, 4));
+// console.log(JSON.stringify(zeni, null, 4));
+
+// console.log(zeni.isChainValid())
