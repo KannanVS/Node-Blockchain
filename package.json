@@ -1,0 +1,22 @@
+{
+  "name": "node-blockchain",
+  "version": "1.0.0",
+  "description": "Sample Blockchain creation",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KannanVS/Node-Blockchain.git"
+  },
+  "author": "Kannan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KannanVS/Node-Blockchain/issues"
+  },
+  "homepage": "https://github.com/KannanVS/Node-Blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  }
+}
